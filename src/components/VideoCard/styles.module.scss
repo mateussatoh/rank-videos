@@ -1,0 +1,35 @@
+.card {
+   height: 100%;
+   width: 340px;
+   margin-top: 30px;
+   transition: all ease-in-out 300ms;
+   border-radius: 6px;
+   cursor: pointer;
+}
+
+.card:hover {
+   background-color: #ddd;
+}
+
+.title {
+   margin-left: 10px;
+   margin-top: 10px;
+}
+
+.numeroVotos {
+   margin-left: auto;
+   color: #666;
+   margin-right: 20px;
+}
+
+.normal {
+   color: #666;
+}
+
+.redSelected {
+   color: #e11a22;
+}
+
+.greenSelected {
+   color: #007c00;
+}
