@@ -63,9 +63,6 @@ function VideoCard({ id, thumb, title, votes, setVideoInFrame, voteType }) {
             <div>
                <IconButton
                   aria-label="add to favorites"
-                  className={
-                     voteType === "true" ? styles.greenSelected : styles.normal
-                  }
                   onClick={async () => {
                      if (!user) {
                         toast.warn(
@@ -107,13 +104,16 @@ function VideoCard({ id, thumb, title, votes, setVideoInFrame, voteType }) {
                      }
                   }}
                >
-                  <ThumbUpIcon />
+                  <ThumbUpIcon
+                     className={
+                        voteType === "true"
+                           ? styles.greenSelected
+                           : styles.normal
+                     }
+                  />
                </IconButton>
                <IconButton
                   aria-label="share"
-                  className={
-                     voteType === "false" ? styles.redSelected : styles.normal
-                  }
                   onClick={async () => {
                      if (!user) {
                         toast.warn(
@@ -155,7 +155,13 @@ function VideoCard({ id, thumb, title, votes, setVideoInFrame, voteType }) {
                      }
                   }}
                >
-                  <ThumbDownIcon />
+                  <ThumbDownIcon
+                     className={
+                        voteType === "false"
+                           ? styles.redSelected
+                           : styles.normal
+                     }
+                  />
                </IconButton>
             </div>
             <Typography
